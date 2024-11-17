@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang ="ja">
+<head>
+    <meta charset ="UTF-8" />
+    <title>メンバー登録</title>
+</head>
+<body>
+    {{ error }}
+    <form method="POST">{% csrf_token%}
+        <h1>メンバー登録する</h1>
+        <input type="text" placeholder="username" name='username' required>
+        <input type="password" placeholder="password" name='password' required>
+        <button type="submit">登録</button>
+    </form>
+    <p><a href="{% url 'login' %}">ログイン画面へ移動</a></p>
+</body>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang ="ja">
+<head>
+    <meta charset ="UTF-8" />
+    <title>メモの新規作成</title>
+</head>
+<body>
+    <form action='' method='POST'>{% csrf_token %}
+        <p>title:{{ form.title }}</p>
+        <p>memo:{{ form.memo }}</p>
+        <input type='submit' value='作成する'>
+    </form>
+</body>
